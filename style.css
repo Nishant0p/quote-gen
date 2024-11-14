@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./img/download.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.quote-box {
+    background: rgba(255, 255, 255, 0.9);
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.quote-box h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.quote-type {
+    font-size: 20px;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+blockquote {
+    font-size: 24px;
+    font-style: italic;
+    color: #555;
+    margin: 20px 0;
+}
+
+span {
+    display: block;
+    font-size: 18px;
+    color: #777;
+}
+
+.quote-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.quote-controls select {
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #007BFF; 
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333; 
+    cursor: pointer;
+    transition: border-color 0.3s, box-shadow 0.3s; 
+}
+
+.quote-controls select:hover {
+    border-color: #0056b3; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+}
+
+.quote-box button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.quote-box button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    background-color: none; 
+    text-align: center; 
+    padding: 20px 0; 
+}
+
+.social-media {
+    margin-top: 10px; 
+}
+
+.social-media a {
+    margin: 0 10px; 
+    color: #555; 
+    font-size: 24px; 
+    text-decoration: none; 
+}
+
+.social-media a:hover {
+    color: #007BFF; 
+}
+
+@media (max-width: 768px) {
+    .quote-box {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .quote-box h1 {
+        font-size: 24px;
+    }
+
+    .quote-type {
+        font-size: 18px;
+    }
+
+    blockquote {
+        font-size: 20px;
+    }
+
+    span {
+        font-size: 16px;
+    }
+
+    .quote-controls select,
+    .quote-box button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .quote-box {
+        padding: 15px;
+    }
+
+    .quote-box h1 {
+        font-size: 20px;
+    }
+
+    .quote-type {
+        font-size: 16px;
+    }
+
+    blockquote {
+        font-size: 18px;
+    }
+
+    span {
+        font-size: 14px;
+    }
+
+    .quote-controls select,
+    .quote-box button {
+        font-size: 12px;
+        padding: 6px;
+    }
+}

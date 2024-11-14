@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote of the Day</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="inspirational.js"></script>
+    <script src="funny.js"></script>
+    <script src="life.js"></script>
+    <script src="love.js"></script>
+    <script src="family.js"></script>
+    <script src="anime.js"></script>
+    <script src="alone.js"></script>
+    <script src="movies.js"></script>
+    <script src="webseries.js"></script>
+</head>
+<body>
+    <div class="quote-box">
+        <h1>Quote of the Day</h1>
+        <blockquote id="quote">Loading</blockquote>
+        <span id="author">Loading</span>
+        <div class="quote-controls">
+            <select id="quote-type">
+                <option value="inspirational">Inspirational</option>
+                <option value="funny">Funny</option>
+                <option value="life">Life</option>
+                <option value="love">Love</option>
+                <option value="family">Family</option>
+                <option value="anime">Anime</option>
+                <option value="alone">Alone</option>
+                <option value="movies">Movies</option>
+                <option value="webseries">Web Series</option>
+            </select>
+            <button id="fetch-button" onclick="getRandomQuote()">Get Quote</button>
+        </div>
+    </div>
+    <footer>
+        <div class="social-media">
+            <a href="https://github.com/Nishant0p" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://discord.com/channels/@utkarsh0p" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://www.instagram.com/nishant_sharma._1" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+    
+    <script>
+        const quotes = {
+            inspirational: inspirationalQuotes,
+            funny: funnyQuotes,
+            life: lifeQuotes,
+            love: loveQuotes,
+            family: familyQuotes,
+            anime: animeQuotes,
+            alone: aloneQuotes,
+            movies: moviesQuotes,
+            webseries: webseriesQuotes,
+            
+        };
+
+        function getRandomQuote() {
+            const quoteType = document.getElementById("quote-type").value;
+            console.log("Selected quote type:", quoteType); 
+            const selectedQuotes = quotes[quoteType];
+            console.log("Selected quotes:", selectedQuotes);
+            const randomIndex = Math.floor(Math.random() * selectedQuotes.length);
+            const randomQuote = selectedQuotes[randomIndex];
+            console.log("Random quote:", randomQuote); 
+            
+            document.getElementById("quote").innerHTML = `"${randomQuote.quote}"`;
+            document.getElementById("author").innerHTML = `- ${randomQuote.author}`;
+        }
+    </script>
+</body>
+</html>
